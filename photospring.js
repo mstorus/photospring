@@ -8,7 +8,7 @@
 				console.log(res);
 				var entries = res.data.responseData.feed.entries;
 				$scope.photos = _.map(entries, function (entry) {
-					
+					return entry.content;
 				});
             });
         };

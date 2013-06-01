@@ -11,6 +11,13 @@
 <body>
 <div ng-controller='PhotospringCtrl'>
   <button ng-click='loadFeed()'>Load Feed</button>
+  <div>
+	<ul>
+	  <li ng-repeat="photo in photos">
+		<div ng-bind-html-unsafe="photo"></div>
+	  </li>
+	</ul>
+  </div>
 </div>
 </body>
 </html>
