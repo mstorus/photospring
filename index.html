@@ -5,7 +5,8 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js">;</script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js">;</script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js">;</script>
-  <script src='photospring.js'>;</script>
+  <script src="photospring.js">;</script>
+  <link type="text/css" rel="stylesheet" href="photospring.css">
 </head>
 
 <body>
@@ -13,8 +14,8 @@
   <button ng-click='loadFeed()'>Load Feed</button>
   <div>
 	<ul>
-	  <li ng-repeat="photo in photos">
-		<div ng-bind-html-unsafe="photo"></div>
+	  <li ng-repeat="oembed in oembeds">
+		<img ng-src="{{oembed.value.url}}">
 	  </li>
 	</ul>
   </div>
